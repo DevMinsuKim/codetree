@@ -1,15 +1,14 @@
 const fs = require("fs");
 let input = fs.readFileSync(0).toString().trim().split("\n");
 
-let A = input[0].split(" ")
-let B = input[1].split(" ")
+let child1 = input[0].split(" ")
+let child2 = input[1].split(" ")
 
-if (Number(A[0]) > Number(B[0])) {
+let mathA = Number(child1[0]), engA = Number(child1[1]);
+let mathB = Number(child2[0]), engB = Number(child2[1]);
+
+if(mathA > mathB || (mathA == mathB && engA > engB)) {
     console.log("A")
-} else if (Number(A[0]) === Number(B[0])) {
-    if (Number(A[1]) > Number(B[1])) {
-        console.log("A")
-    }
 } else {
     console.log("B")
 }
