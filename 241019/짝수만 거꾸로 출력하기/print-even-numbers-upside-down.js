@@ -1,7 +1,7 @@
 const fs = require("fs");
 let input = fs.readFileSync(0).toString().trim().split("\n");
 
-let numberArr = input.map(Number).reverse();
+let numberArr = input[1].split(" ").map(Number).reverse();
 let result = [];
 
 for(const e of numberArr) {
